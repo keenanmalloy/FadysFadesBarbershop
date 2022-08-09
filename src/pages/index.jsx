@@ -182,7 +182,7 @@ function App() {
             <div className="text-center space-y-2 flex flex-col lg:w-1/3">
               <div className="flex items-center justify-center">
                 <img
-                  src="images/fadysfadescut2.png"
+                  src="images/fadysfadescut2.PNG"
                   alt=""
                   className="max-w-xs"
                 />
@@ -205,7 +205,7 @@ function App() {
             <div className="text-center space-y-2 lg:w-1/3">
               <div className="flex items-center justify-center">
                 <img
-                  src="images/fadysfadescut3.png"
+                  src="images/fadysfadescut3.PNG"
                   alt=""
                   className="max-w-xs"
                 />
@@ -228,7 +228,7 @@ function App() {
             <div className="text-center space-y-2 lg:w-1/3">
               <div className="flex items-center justify-center">
                 <img
-                  src="images/fadysfadescut4.png"
+                  src="images/fadysfadescut4.PNG"
                   alt=""
                   className="max-w-xs"
                 />
