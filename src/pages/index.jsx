@@ -38,8 +38,8 @@ function App() {
           <header
             className={
               color
-                ? "flex justify-between pt-6 px-3 items-center text-white  fixed z-50 top-0 right-0 left-0 bg-[#15182B]"
-                : "flex justify-between pt-6 px-3 items-center text-white fixed z-50 top-0 right-0 left-0 bg-transparent"
+                ? "flex justify-between py-6 px-3 items-center text-white  fixed z-50 top-0 right-0 left-0 bg-[#15182B]"
+                : "flex justify-between py-6 px-3 items-center text-white fixed z-50 top-0 right-0 left-0 bg-transparent"
             }
           >
             <Link
