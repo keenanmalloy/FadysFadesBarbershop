@@ -1,5 +1,5 @@
-const placeId = "ChIJJ9OI1c5whlQRFe8l44TvGM0";
-const apiKey = "AIzaSyCNS6Lr8lxqPgF_afnULPWh1MtliQ33LeI";
+const placeId = process.env.GOOGLE_PLACE_ID;
+const apiKey = process.env.GOOGLE_API_KEY;
 const url = `https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeId}&key=${apiKey}`;
 
 const getReviews = async (req, res) => {
