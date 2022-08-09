@@ -109,7 +109,7 @@ function App() {
 
           <div className="absolute bg-gradient-to-r from-[#1B1F34] to-[#575045] w-full ">
             <img
-              src="/images/fadysfadesowner2.png"
+              src="/images/fadysfadesowner2.PNG"
               className=" mix-blend-overlay h-screen object-cover w-full object-left"
               alt="fadysfades"
             />
@@ -266,24 +266,24 @@ function App() {
               showArrows={true}
               width="80%"
             >
-              <img src="/images/fadysfadescut5.png" alt="" />
+              <img src="/images/fadysfadescut5.PNG" alt="" />
 
-              <img src="/images/fadysfadescut6.png" alt="" />
+              <img src="/images/fadysfadescut6.PNG" alt="" />
 
-              <img src="/images/fadysfadescut7.png" alt="" />
+              <img src="/images/fadysfadescut7.PNG" alt="" />
 
-              <img src="/images/fadysfadescut8.png" alt="" />
+              <img src="/images/fadysfadescut8.PNG" alt="" />
 
-              <img src="/images/fadysfadescut9.png" alt="" />
+              <img src="/images/fadysfadescut9.PNG" alt="" />
 
-              <img src="/images/fadysfadescut10.png" alt="" />
+              <img src="/images/fadysfadescut10.PNG" alt="" />
 
-              <img src="/images/fadysfadescut11.png" alt="" />
+              <img src="/images/fadysfadescut11.PNG" alt="" />
 
               <img src="/images/fadysfadescut1.jpg" alt="" />
-              <img src="/images/fadysfadescut2.png" alt="" />
-              <img src="/images/fadysfadescut3.png" alt="" />
-              <img src="/images/fadysfadescut4.png" alt="" />
+              <img src="/images/fadysfadescut2.PNG" alt="" />
+              <img src="/images/fadysfadescut3.PNG" alt="" />
+              <img src="/images/fadysfadescut4.PNG" alt="" />
             </Carousel>
           </div>
         </section>
