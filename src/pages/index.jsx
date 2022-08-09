@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Reviews } from "../Reviews";
 import Image from "next/image";
 import { Helmet } from "react-helmet";
-import { Modal } from "./Modal";
+import { Modal } from "../Modal";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
