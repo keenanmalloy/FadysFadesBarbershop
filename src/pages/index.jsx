@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import {Link} from 'react-scroll';
+import { Link } from "react-scroll";
 import { Reviews } from "../Reviews";
 import Image from "next/image";
 import { Helmet } from "react-helmet";
@@ -12,7 +12,6 @@ import ContactForm from "../ContactForm";
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [color, setColor] = useState(false);
-
 
   if (typeof window === "undefined") {
     console.log("Oops, `window` is not defined");
@@ -27,8 +26,6 @@ function App() {
 
     window.addEventListener("scroll", changeColor);
   }
-
-
 
   return (
     <div className="App">
@@ -47,8 +44,17 @@ function App() {
             <Link
               href="#home
           "
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
             >
-              {!showModal ? <h2 className="text-2xl  font-Dela">Fady's Fades Barbershop</h2> : <h2 className="hidden">Fady's Fades Barbershop</h2>}
+              {!showModal ? (
+                <h2 className="text-2xl  font-Dela">Fady's Fades Barbershop</h2>
+              ) : (
+                <h2 className="hidden">Fady's Fades Barbershop</h2>
+              )}
             </Link>
             <nav>
               <button
@@ -75,43 +81,95 @@ function App() {
               </button>
               <ul className="hidden md:flex space-x-4 xl:space-x-6 items-center">
                 <button className="hover:text-[#f2ae1b]">
-                  <Link href="#home" to="home" spy={true} smooth={true} offset={50} duration={500}>
+                  <Link
+                    href="#home"
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
                     <li>Home</li>
                   </Link>
                 </button>
                 <button className="hover:text-[#f2ae1b]">
-                  <Link href="#about" className="hover:text-[#f2ae1b]" to="about" spy={true} smooth={true} offset={50} duration={500}>
+                  <Link
+                    href="#about"
+                    className="hover:text-[#f2ae1b]"
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
                     <li>About</li>
                   </Link>
                 </button>
                 <button className="hover:text-[#f2ae1b]">
-                  <Link href="#services" className="hover:text-[#f2ae1b]" to="services" spy={true} smooth={true} offset={50} duration={500}>
+                  <Link
+                    href="#services"
+                    className="hover:text-[#f2ae1b]"
+                    to="services"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
                     <li>Services</li>
                   </Link>
                 </button>
-                <button className="hover:text-[#f2ae1b]" >
-                  <Link href="#barbers" to="barbers" spy={true} smooth={true} offset={50} duration={500} className="hover:text-[#f2ae1b]">
+                <button className="hover:text-[#f2ae1b]">
+                  <Link
+                    href="#barbers"
+                    to="barbers"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    className="hover:text-[#f2ae1b]"
+                  >
                     <li>Barbers</li>
                   </Link>
                 </button>
                 <button className="hover:text-[#f2ae1b]">
-                  <Link href="#reviews" className="hover:text-[#f2ae1b]" to="reviews" spy={true} smooth={true} offset={50} duration={500}>
+                  <Link
+                    href="#reviews"
+                    className="hover:text-[#f2ae1b]"
+                    to="reviews"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
                     <li>Reviews</li>
                   </Link>
                 </button>
                 <button className="hover:text-[#f2ae1b]">
-                  <Link href="#contact" className="hover:text-[#f2ae1b]" to="contact" spy={true} smooth={true} offset={50} duration={500}>
+                  <Link
+                    href="#contact"
+                    className="hover:text-[#f2ae1b]"
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
                     <li>Contact</li>
                   </Link>
                 </button>
-                <Link href="#book" to="book" spy={true} smooth={true} offset={50} duration={500}>
-                <button>
-                <li className="border-[#f2ae1b] border-solid border-2 text-[#f2ae1b] px-5 py-3 hover:bg-[#f2ae1b] hover:text-black font-Dela text-xs">
-                  
-                    Book Now
-                  
-                </li>
-                </button>
+                <Link
+                  href="#book"
+                  to="book"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                >
+                  <button>
+                    <li className="border-[#f2ae1b] border-solid border-2 text-[#f2ae1b] px-5 py-3 hover:bg-[#f2ae1b] hover:text-black font-Dela text-xs">
+                      Book Now
+                    </li>
+                  </button>
                 </Link>
               </ul>
             </nav>
@@ -203,9 +261,7 @@ function App() {
               <h2 className="text-white font-Dela text-xl py-5">
                 Hair Cutting
               </h2>
-              <p className="text-[#f2ae1b] leading-relaxed lg:px-5">
-                24$
-              </p>
+              <p className="text-[#f2ae1b] leading-relaxed lg:px-5">24$</p>
               {/* <div className="py-7 flex justify-center">
                 <button className="text-[#959DCC] font-bold flex items-center text-sm hover:text-[#f2ae1b]">
                   KNOW MORE <AiOutlineArrowRight />
@@ -223,9 +279,7 @@ function App() {
               <h2 className="text-white font-Dela text-xl py-5">
                 Beard Trimming
               </h2>
-              <p className="text-[#f2ae1b] leading-relaxed lg:px-5">
-                21$
-              </p>
+              <p className="text-[#f2ae1b] leading-relaxed lg:px-5">21$</p>
               {/* <div className="py-7 flex justify-center ">
                 <button className="text-[#959DCC] font-bold flex items-center text-sm hover:text-[#f2ae1b]">
                   KNOW MORE <AiOutlineArrowRight />
@@ -241,9 +295,7 @@ function App() {
                 />
               </div>
               <h2 className="text-white font-Dela text-xl py-5">Cold Shave</h2>
-              <p className="text-[#f2ae1b] leading-relaxed lg:px-5">
-                25$
-              </p>
+              <p className="text-[#f2ae1b] leading-relaxed lg:px-5">25$</p>
               {/* <div className="py-7 flex justify-center">
                 <button className="text-[#959DCC] font-bold flex items-center text-sm hover:text-[#f2ae1b]">
                   KNOW MORE <AiOutlineArrowRight />
@@ -258,8 +310,8 @@ function App() {
               </Link>
             </div>
             <div className="text-[#f2ae1b] border-solid border border-[#f2ae1b] w-40 h-12 font-Dela flex justify-center  hover:bg-[#f2ae1b] hover:text-[black]">
-            <Link href="#contact">
-              <button>Get in touch</button>
+              <Link href="#contact">
+                <button>Get in touch</button>
               </Link>
             </div>
           </div>
