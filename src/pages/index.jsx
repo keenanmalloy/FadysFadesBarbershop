@@ -28,6 +28,8 @@ function App() {
     window.addEventListener("scroll", changeColor);
   }
 
+
+
   return (
     <div className="App">
       {showModal && (
@@ -58,7 +60,7 @@ function App() {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-8 h-8 md:hidden fixed top-2 right-2"
+                  className={"w-8 h-8 md:hidden fixed top-7 right-2"}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
