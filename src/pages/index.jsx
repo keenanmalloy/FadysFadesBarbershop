@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import Link from "next/link";
+import {Link} from 'react-scroll';
 import { Reviews } from "../Reviews";
 import Image from "next/image";
 import { Helmet } from "react-helmet";
@@ -75,41 +75,44 @@ function App() {
               </button>
               <ul className="hidden md:flex space-x-4 xl:space-x-6 items-center">
                 <button className="hover:text-[#f2ae1b]">
-                  <Link href="#home">
+                  <Link href="#home" to="home" spy={true} smooth={true} offset={50} duration={500}>
                     <li>Home</li>
                   </Link>
                 </button>
                 <button className="hover:text-[#f2ae1b]">
-                  <Link href="#about" className="hover:text-[#f2ae1b]">
+                  <Link href="#about" className="hover:text-[#f2ae1b]" to="about" spy={true} smooth={true} offset={50} duration={500}>
                     <li>About</li>
                   </Link>
                 </button>
                 <button className="hover:text-[#f2ae1b]">
-                  <Link href="#services" className="hover:text-[#f2ae1b]">
+                  <Link href="#services" className="hover:text-[#f2ae1b]" to="services" spy={true} smooth={true} offset={50} duration={500}>
                     <li>Services</li>
                   </Link>
                 </button>
-                <button className="hover:text-[#f2ae1b]">
-                  <Link href="#barbers" className="hover:text-[#f2ae1b]">
+                <button className="hover:text-[#f2ae1b]" >
+                  <Link href="#barbers" to="barbers" spy={true} smooth={true} offset={50} duration={500} className="hover:text-[#f2ae1b]">
                     <li>Barbers</li>
                   </Link>
                 </button>
                 <button className="hover:text-[#f2ae1b]">
-                  <Link href="#reviews" className="hover:text-[#f2ae1b]">
+                  <Link href="#reviews" className="hover:text-[#f2ae1b]" to="reviews" spy={true} smooth={true} offset={50} duration={500}>
                     <li>Reviews</li>
                   </Link>
                 </button>
                 <button className="hover:text-[#f2ae1b]">
-                  <Link href="#contact" className="hover:text-[#f2ae1b]">
+                  <Link href="#contact" className="hover:text-[#f2ae1b]" to="contact" spy={true} smooth={true} offset={50} duration={500}>
                     <li>Contact</li>
                   </Link>
                 </button>
-
+                <Link href="#book" to="book" spy={true} smooth={true} offset={50} duration={500}>
+                <button>
                 <li className="border-[#f2ae1b] border-solid border-2 text-[#f2ae1b] px-5 py-3 hover:bg-[#f2ae1b] hover:text-black font-Dela text-xs">
-                  <button>
-                    <Link href="#book">Book Now</Link>
-                  </button>
+                  
+                    Book Now
+                  
                 </li>
+                </button>
+                </Link>
               </ul>
             </nav>
           </header>
