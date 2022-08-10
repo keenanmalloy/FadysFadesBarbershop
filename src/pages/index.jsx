@@ -255,11 +255,13 @@ function App() {
               </Link>
             </div>
             <div className="text-[#f2ae1b] border-solid border border-[#f2ae1b] w-40 h-12 font-Dela flex justify-center  hover:bg-[#f2ae1b] hover:text-[black]">
+            <Link href="#contact">
               <button>Get in touch</button>
+              </Link>
             </div>
           </div>
         </section>
-        <section className="w-full pt-20 bg-[#1B1F34]">
+        <section className="w-full pt-20 bg-[#15182B]">
           <div>
             <Carousel
               className="flex flex-col justify-center items-center"
