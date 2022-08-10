@@ -11,22 +11,20 @@ import { Modal } from "../Modal";
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [color, setColor] = useState(false);
-  
-   
 
   if (typeof window === "undefined") {
-    console.log("Oops, `window` is not defined")
+    console.log("Oops, `window` is not defined");
   } else {
-  const changeColor = () => {
-    if (window.scrollY >= 150) {
-      setColor(true);
-    } else {
-      setColor(false);
-    }
-  };
+    const changeColor = () => {
+      if (window.scrollY >= 100) {
+        setColor(true);
+      } else {
+        setColor(false);
+      }
+    };
 
-  window.addEventListener("scroll", changeColor);
-}
+    window.addEventListener("scroll", changeColor);
+  }
 
   return (
     <div className="App">
@@ -38,8 +36,8 @@ function App() {
           <header
             className={
               color
-                ? "flex justify-between py-6 px-3 items-center text-white  fixed z-50 top-0 right-0 left-0 bg-[#15182B]"
-                : "flex justify-between py-6 px-3 items-center text-white fixed z-50 top-0 right-0 left-0 bg-transparent"
+                ? "flex justify-between  px-3 items-center text-white  fixed z-50 top-0 right-0 left-0 bg-[#15182B]"
+                : "flex justify-between  px-3 items-center text-white fixed z-50 top-0 right-0 left-0 bg-transparent"
             }
           >
             <Link
@@ -123,18 +121,21 @@ function App() {
               Burnaby's Best <br /> Barbershop
               <span className="text-[#f2ae1b] text-4xl">.</span>
             </h1>
-            <p className="pt-5 pb-5 leading-7  text-[#959DCC]">
+            {/* <p className="pt-5 pb-5 leading-7  text-[#959DCC]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptates, quisquam. Lorem ipsum dolor sit amet consectetur
               adipisicing elit.
-            </p>
+            </p> */}
 
-            <button className="px-5 py-3 bg-[#f2ae1b] text-black font-bold hover:bg-[#15182B] hover:text-[#f2ae1b] border-solid border border-[#f2ae1b]" >
+            <button className="px-5 py-3 mt-10 bg-[#f2ae1b] text-black font-bold hover:bg-[#15182B] hover:text-[#f2ae1b] border-solid border border-[#f2ae1b]">
               <Link href="#book">Book Appointment</Link>
             </button>
           </div>
         </section>
-        <section className="relative after:w-1/4 after:h-full after:bg-[#f2ae1b] after:absolute after:top-0 after:left-0" id="about">
+        <section
+          className="relative after:w-1/4 after:h-full after:bg-[#f2ae1b] after:absolute after:top-0 after:left-0"
+          id="about"
+        >
           <div className="lg:ml-36 xl:ml-52 2xl:ml-80 py-32">
             <div className="flex flex-col sm:flex-row leading-loose lg:space-x-20">
               <div className="flex justify-center px-5 z-10">
@@ -144,10 +145,7 @@ function App() {
                   className="grayscale object-cover"
                 />
               </div>
-              <div
-                className="flex flex-col pt-20 px-5 items-center sm:items-start z-10"
-                
-              >
+              <div className="flex flex-col pt-20 px-5 items-center sm:items-start z-10">
                 <h3 className="text-[#f2ae1b] font-bold">About us</h3>
                 <h2 className="text-white font-Dela text-3xl pb-5">
                   About Fady's Fades
@@ -166,19 +164,22 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="bg-[#15182B]" >
-          <div className="text-center space-y-2 pt-24 sm:pt-14 pb-16 flex flex-col " id="services">
-            <h3 className="text-[#f2ae1b] font-Dela" >What we offer?</h3>
+        <section className="bg-[#15182B]">
+          <div
+            className="text-center space-y-2 pt-24 sm:pt-14 pb-16 flex flex-col "
+            id="services"
+          >
+            <h3 className="text-[#f2ae1b] font-Dela">What we offer?</h3>
             <h2 className="text-white font-Dela text-4xl pb-5">Our Services</h2>
-            <p className="text-[#959DCC] leading-relaxed lg:px-80">
+            {/* <p className="text-[#959DCC] leading-relaxed lg:px-80">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
               nostrum, inventore ducimus temporibus doloribus incidunt, porro
               ullam obcaecati quo nisi fugiat nemo id minima perspiciatis
               recusandae placeat natus modi reprehenderit.
-            </p>
+            </p> */}
           </div>
           {/* REACT COMPONENT SERVICES */}
-          <div className="lg:flex" >
+          <div className="lg:flex">
             <div className="text-center space-y-2 flex flex-col lg:w-1/3">
               <div className="flex items-center justify-center">
                 <img
@@ -190,17 +191,17 @@ function App() {
               <h2 className="text-white font-Dela text-xl py-5">
                 Hair Cutting
               </h2>
-              <p className="text-[#959DCC] leading-relaxed lg:px-5">
+              {/* <p className="text-[#959DCC] leading-relaxed lg:px-5">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
                 recusandae exercitationem explicabo eveniet sequi vero in.
                 Deleniti asperiores molestiae tenetur mollitia perspiciatis
                 quaerat at error! Illum soluta explicabo mollitia ea.
-              </p>
-              <div className="py-7 flex justify-center">
+              </p> */}
+              {/* <div className="py-7 flex justify-center">
                 <button className="text-[#959DCC] font-bold flex items-center text-sm hover:text-[#f2ae1b]">
                   KNOW MORE <AiOutlineArrowRight />
                 </button>
-              </div>
+              </div> */}
             </div>
             <div className="text-center space-y-2 lg:w-1/3">
               <div className="flex items-center justify-center">
@@ -213,17 +214,17 @@ function App() {
               <h2 className="text-white font-Dela text-xl py-5">
                 Beard Trimming
               </h2>
-              <p className="text-[#959DCC] leading-relaxed lg:px-5">
+              {/* <p className="text-[#959DCC] leading-relaxed lg:px-5">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
                 recusandae exercitationem explicabo eveniet sequi vero in.
                 Deleniti asperiores molestiae tenetur mollitia perspiciatis
                 quaerat at error! Illum soluta explicabo mollitia ea.
-              </p>
-              <div className="py-7 flex justify-center ">
+              </p> */}
+              {/* <div className="py-7 flex justify-center ">
                 <button className="text-[#959DCC] font-bold flex items-center text-sm hover:text-[#f2ae1b]">
                   KNOW MORE <AiOutlineArrowRight />
                 </button>
-              </div>
+              </div> */}
             </div>
             <div className="text-center space-y-2 lg:w-1/3">
               <div className="flex items-center justify-center">
@@ -234,22 +235,24 @@ function App() {
                 />
               </div>
               <h2 className="text-white font-Dela text-xl py-5">Cold Shave</h2>
-              <p className="text-[#959DCC] leading-relaxed lg:px-5">
+              {/* <p className="text-[#959DCC] leading-relaxed lg:px-5">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
                 recusandae exercitationem explicabo eveniet sequi vero in.
                 Deleniti asperiores molestiae tenetur mollitia perspiciatis
                 quaerat at error! Illum soluta explicabo mollitia ea.
-              </p>
-              <div className="py-7 flex justify-center">
+              </p> */}
+              {/* <div className="py-7 flex justify-center">
                 <button className="text-[#959DCC] font-bold flex items-center text-sm hover:text-[#f2ae1b]">
                   KNOW MORE <AiOutlineArrowRight />
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="flex flex-col justify-center items-center lg:flex-row lg:space-x-5 lg:pt-10 lg:pb-32">
             <div className="bg-[#f2ae1b] w-40 h-12 font-Dela flex justify-center hover:bg-[#15182B] hover:text-[#f2ae1b] border-solid border border-[#f2ae1b]">
-              <button>Appointment</button>
+              <Link href="#book">
+                <button>Appointment</button>
+              </Link>
             </div>
             <div className="text-[#f2ae1b] border-solid border border-[#f2ae1b] w-40 h-12 font-Dela flex justify-center  hover:bg-[#f2ae1b] hover:text-[black]">
               <button>Get in touch</button>
@@ -288,21 +291,16 @@ function App() {
           </div>
         </section>
         <section className="bg-[#15182B]" id="barbers">
-          <div className="text-center space-y-2 pt-24 pb-16 flex flex-col ">
+          <div className="text-center space-y-2 pt-16  flex flex-col ">
             <h3 className="text-[#f2ae1b] font-Dela">Barbers</h3>
             <h2 className="text-white font-Dela text-4xl pb-5">
               Meet Our Barbers
             </h2>
-            <p className="text-[#959DCC] leading-relaxed lg:px-80">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              nostrum, inventore ducimus temporibus doloribus incidunt, porro
-              ullam obcaecati quo nisi fugiat nemo id minima perspiciatis
-              recusandae placeat natus modi reprehenderit.
-            </p>
+            
           </div>
           {/* REACT COMPONENT SERVICES */}
-          <div className="lg:flex">
-            <div className="text-center space-y-2 flex flex-col lg:w-1/3">
+          <div className="lg:flex flex justify-center">
+            <div className="text-center flex flex-col lg:w-1/3">
               <div className="flex items-center justify-center">
                 <img
                   src="images/fadysfadesowner.jpg"
@@ -317,7 +315,7 @@ function App() {
                 Hair Cutter
               </p>
             </div>
-            <div className="text-center space-y-2 flex flex-col lg:w-1/3">
+            {/* <div className="text-center space-y-2 flex flex-col lg:w-1/3">
               <div className="flex items-center justify-center">
                 <img
                   src="images/fadysfadesowner.jpg"
@@ -331,8 +329,8 @@ function App() {
               <p className="text-[#959DCC] leading-relaxed lg:px-5 pb-10">
                 Hair Cutter
               </p>
-            </div>
-            <div className="text-center space-y-2 flex flex-col lg:w-1/3">
+            </div> */}
+            {/* <div className="text-center space-y-2 flex flex-col lg:w-1/3">
               <div className="flex items-center justify-center">
                 <img
                   src="images/fadysfadesowner.jpg"
@@ -346,7 +344,7 @@ function App() {
               <p className="text-[#959DCC] leading-relaxed lg:px-5 pb-10">
                 Hair Cutter
               </p>
-            </div>
+            </div> */}
           </div>
         </section>
         <section className="bg-[#1B1F34]" id="reviews">
@@ -356,15 +354,23 @@ function App() {
               <h2 className="text-white font-Dela text-4xl pb-5">
                 What our customers say about us
               </h2>
-              <p className="text-[#959DCC] leading-relaxed lg:px-80">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Eligendi nostrum, inventore ducimus temporibus doloribus
-                incidunt, porro ullam obcaecati quo nisi fugiat nemo id minima
-                perspiciatis recusandae placeat natus modi reprehenderit.
-              </p>
+              <h3 className="text-[#f2ae1b] font-Dela leading-relaxed lg:px-80">
+               Over 90 5 star reviews from our customers!
+              </h3>
             </div>
           </div>
           <Reviews />
+          <div className="flex items-center justify-center  py-10">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.7609568201915!2d-123.01519768255615!3d49.280926599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548670ced588d327%3A0xcd18ef84e325ef15!2sFady%E2%80%99s%20Fades%20Barber%20Shop%20%26%20Hairstyling!5e0!3m2!1sen!2sca!4v1660150404766!5m2!1sen!2sca"
+              width="800"
+              height="600"
+              className="border-0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </section>
         {/* <!-- Calendly inline widget begin --> */}
 
@@ -383,6 +389,7 @@ function App() {
           </Helmet>
         </section>
         {/* <!-- Calendly inline widget end --> */}
+        <section></section>
 
         <footer className="text-[#959DCC] leading-relaxed flex flex-col md:flex-row text-center space-x-5 justify-center p-10  bg-[#15182B] ">
           <div className="flex-1 pb-5">
@@ -396,13 +403,23 @@ function App() {
             <h3 className="text-white font-Dela text-2xl pb-5">
               Working Hours
             </h3>
-            <h4 className="text-white font-Dela">Monday-Sunday</h4>
-            <p>9am - 7pm</p>
+            <h4 className="text-white font-Dela pb-5">Monday-Sunday</h4>
+            <div className="space-y-2">
+
+            <p>Monday, 9a.m.–7p.m.</p>
+            <p>Tuesday, 9a.m.–7p.m.</p>
+            <p>Wednesday, 9a.m.–7p.m.</p>
+            <p>Thursday, 9a.m.–7p.m.</p>
+            <p>Friday, 9a.m.–7p.m.</p>
+            <p>Saturday, 8a.m.–7p.m.</p>
+            <p>Sunday, 10a.m.–5p.m.</p>
+            </div>
+
           </div>
           <div className="flex-1 pb-5">
             <h3 className="text-white font-Dela text-2xl pb-5">Contact Us</h3>
-            <p>hastings street burnaby</p>
-            <p>555-555-5555</p>
+            <p>4138 Hastings St, Burnaby, BC V5C 2J4</p>
+            <Link href='tel:+16045665241'>+16045665241</Link>
             <p>fadysfades@hotmail.com</p>
           </div>
         </footer>
