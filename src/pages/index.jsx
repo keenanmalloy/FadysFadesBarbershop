@@ -7,10 +7,12 @@ import { Reviews } from "../Reviews";
 import Image from "next/image";
 import { Helmet } from "react-helmet";
 import { Modal } from "../Modal";
+import ContactForm from "../ContactForm";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [color, setColor] = useState(false);
+
 
   if (typeof window === "undefined") {
     console.log("Oops, `window` is not defined");
@@ -44,7 +46,7 @@ function App() {
               href="#home
           "
             >
-              <h2 className="text-2xl  font-Dela">Fady's Fades Barbershop</h2>
+              {!showModal ? <h2 className="text-2xl  font-Dela">Fady's Fades Barbershop</h2> : <h2 className="hidden">Fady's Fades Barbershop</h2>}
             </Link>
             <nav>
               <button
@@ -56,7 +58,7 @@ function App() {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-8 h-8 md:hidden"
+                  className="w-8 h-8 md:hidden fixed top-2 right-2"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -93,6 +95,11 @@ function App() {
                 <button className="hover:text-[#f2ae1b]">
                   <Link href="#reviews" className="hover:text-[#f2ae1b]">
                     <li>Reviews</li>
+                  </Link>
+                </button>
+                <button className="hover:text-[#f2ae1b]">
+                  <Link href="#contact" className="hover:text-[#f2ae1b]">
+                    <li>Contact</li>
                   </Link>
                 </button>
 
@@ -191,12 +198,9 @@ function App() {
               <h2 className="text-white font-Dela text-xl py-5">
                 Hair Cutting
               </h2>
-              {/* <p className="text-[#959DCC] leading-relaxed lg:px-5">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
-                recusandae exercitationem explicabo eveniet sequi vero in.
-                Deleniti asperiores molestiae tenetur mollitia perspiciatis
-                quaerat at error! Illum soluta explicabo mollitia ea.
-              </p> */}
+              <p className="text-[#f2ae1b] leading-relaxed lg:px-5">
+                24$
+              </p>
               {/* <div className="py-7 flex justify-center">
                 <button className="text-[#959DCC] font-bold flex items-center text-sm hover:text-[#f2ae1b]">
                   KNOW MORE <AiOutlineArrowRight />
@@ -214,12 +218,9 @@ function App() {
               <h2 className="text-white font-Dela text-xl py-5">
                 Beard Trimming
               </h2>
-              {/* <p className="text-[#959DCC] leading-relaxed lg:px-5">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
-                recusandae exercitationem explicabo eveniet sequi vero in.
-                Deleniti asperiores molestiae tenetur mollitia perspiciatis
-                quaerat at error! Illum soluta explicabo mollitia ea.
-              </p> */}
+              <p className="text-[#f2ae1b] leading-relaxed lg:px-5">
+                21$
+              </p>
               {/* <div className="py-7 flex justify-center ">
                 <button className="text-[#959DCC] font-bold flex items-center text-sm hover:text-[#f2ae1b]">
                   KNOW MORE <AiOutlineArrowRight />
@@ -235,12 +236,9 @@ function App() {
                 />
               </div>
               <h2 className="text-white font-Dela text-xl py-5">Cold Shave</h2>
-              {/* <p className="text-[#959DCC] leading-relaxed lg:px-5">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
-                recusandae exercitationem explicabo eveniet sequi vero in.
-                Deleniti asperiores molestiae tenetur mollitia perspiciatis
-                quaerat at error! Illum soluta explicabo mollitia ea.
-              </p> */}
+              <p className="text-[#f2ae1b] leading-relaxed lg:px-5">
+                25$
+              </p>
               {/* <div className="py-7 flex justify-center">
                 <button className="text-[#959DCC] font-bold flex items-center text-sm hover:text-[#f2ae1b]">
                   KNOW MORE <AiOutlineArrowRight />
@@ -296,7 +294,6 @@ function App() {
             <h2 className="text-white font-Dela text-4xl pb-5">
               Meet Our Barbers
             </h2>
-            
           </div>
           {/* REACT COMPONENT SERVICES */}
           <div className="lg:flex flex justify-center">
@@ -355,7 +352,7 @@ function App() {
                 What our customers say about us
               </h2>
               <h3 className="text-[#f2ae1b] font-Dela leading-relaxed lg:px-80">
-               Over 90 5 star reviews from our customers!
+                Over 90 5 star reviews from our customers!
               </h3>
             </div>
           </div>
@@ -389,7 +386,13 @@ function App() {
           </Helmet>
         </section>
         {/* <!-- Calendly inline widget end --> */}
-        <section></section>
+        <section className="bg-[#15182B] pb-24" id="contact">
+          <div className="text-center space-y-2 pt-24 pb-16 flex flex-col ">
+            <h3 className="text-white font-Dela text-4xl">Contact Us</h3>
+          </div>
+
+          <ContactForm />
+        </section>
 
         <footer className="text-[#959DCC] leading-relaxed flex flex-col md:flex-row text-center space-x-5 justify-center p-10  bg-[#15182B] ">
           <div className="flex-1 pb-5">
@@ -405,21 +408,19 @@ function App() {
             </h3>
             <h4 className="text-white font-Dela pb-5">Monday-Sunday</h4>
             <div className="space-y-2">
-
-            <p>Monday, 9a.m.–7p.m.</p>
-            <p>Tuesday, 9a.m.–7p.m.</p>
-            <p>Wednesday, 9a.m.–7p.m.</p>
-            <p>Thursday, 9a.m.–7p.m.</p>
-            <p>Friday, 9a.m.–7p.m.</p>
-            <p>Saturday, 8a.m.–7p.m.</p>
-            <p>Sunday, 10a.m.–5p.m.</p>
+              <p>Monday, 9a.m.–7p.m.</p>
+              <p>Tuesday, 9a.m.–7p.m.</p>
+              <p>Wednesday, 9a.m.–7p.m.</p>
+              <p>Thursday, 9a.m.–7p.m.</p>
+              <p>Friday, 9a.m.–7p.m.</p>
+              <p>Saturday, 8a.m.–7p.m.</p>
+              <p>Sunday, 10a.m.–5p.m.</p>
             </div>
-
           </div>
           <div className="flex-1 pb-5">
             <h3 className="text-white font-Dela text-2xl pb-5">Contact Us</h3>
             <p>4138 Hastings St, Burnaby, BC V5C 2J4</p>
-            <Link href='tel:+16045665241'>+16045665241</Link>
+            <Link href="tel:+16045665241">+16045665241</Link>
             <p>fadysfades@hotmail.com</p>
           </div>
         </footer>

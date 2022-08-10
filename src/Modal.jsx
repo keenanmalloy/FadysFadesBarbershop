@@ -30,6 +30,11 @@ export const Modal = ({setShowModal}) => {
           <li>Reviews</li>
         </Link>
         </button>
+        <button onClick={() => setShowModal(false)}>
+                  <Link href="#contact" className="hover:text-[#f2ae1b]">
+                    <li>Contact</li>
+                  </Link>
+                </button>
         <li className="border-[#f2ae1b] border-solid border-2 text-[#f2ae1b] px-5 py-3 hover:bg-[#f2ae1b] hover:text-black font-Dela text-xs">
           <button onClick={() => setShowModal(false)}>
             <Link href="#book">Book Now</Link>
